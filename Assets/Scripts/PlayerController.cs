@@ -3,15 +3,18 @@
 public class PlayerController : MonoBehaviour
 {
 
+	public Transform respawnPoint;
 	public float moveSpeed;
 	public float jumpSpeed;
 	public bool canMove;
 
+	private LevelManager levelManager;
 	private Rigidbody2D body;
 
 	// Start is called before the first frame update
 	void Start()
 	{
+		levelManager = FindObjectOfType<LevelManager>();
 		body = GetComponent<Rigidbody2D>();
 		canMove = true;
 	}
@@ -58,6 +61,21 @@ public class PlayerController : MonoBehaviour
 		UpdateAnimator();
 	}
 
+	void OnTriggerEnter2D(Collider2D other)
+	{
+		if (other.gameObject.CompareTag(DEATHBOX_TAG))
+		{
+			levelManager.RespawnPlayer();
+		}
+
+		Coin coin = other.GetComponent<Coin>();
+		if (coin != null)
+		{
+			levelManager.AddCoins(coin.coinAmount);
+			coin.gameObject.SetActive(false);
+		}
+	}
+
 	void OnCollisionEnter2D(Collision2D other)
 	{
 		if (other.gameObject.CompareTag(PLATFORM_TAG))
@@ -76,6 +94,7 @@ public class PlayerController : MonoBehaviour
 
 #region Prepared Code
 	private const string PLATFORM_TAG = "MovingPlatform";
+	private const string DEATHBOX_TAG = "DeathBox";
 	private bool lastIsGrounded;
 	private float groundCheckRadius = 0.05f;
 
