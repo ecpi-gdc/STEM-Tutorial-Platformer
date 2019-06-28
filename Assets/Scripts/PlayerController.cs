@@ -5,9 +5,11 @@ public class PlayerController : MonoBehaviour
 
 	public float moveSpeed;
 	public float jumpSpeed;
+	public float platformMultiplier;
 	public bool canMove;
 
 	private Rigidbody2D body;
+	private bool onPlatform;
 
 	// Start is called before the first frame update
 	void Start()
@@ -24,6 +26,11 @@ public class PlayerController : MonoBehaviour
 		bool isGrounded = CheckGrounded();
 
 		float speed = moveSpeed;
+		if (onPlatform)
+		{
+			speed = speed * platformMultiplier;
+		}
+
 		Vector2 newVelocity = new Vector2();
 		Vector2 newScale = new Vector2(1, 1);
 
@@ -55,9 +62,29 @@ public class PlayerController : MonoBehaviour
 		UpdateAnimator();
 	}
 
+	void OnCollisionEnter2D(Collision2D other)
+	{
+		if (other.gameObject.CompareTag(PLATFORM_TAG))
+		{
+			transform.parent = other.transform;
+			onPlatform = true;
+		}
+	}
+
+	void OnCollisionExit2D(Collision2D other) 
+	{
+		if (other.gameObject.CompareTag(PLATFORM_TAG)) 
+		{
+			transform.parent = null;
+			onPlatform = false;
+		}
+	}
+
 #region Prepared Code
+	private const string PLATFORM_TAG = "MovingPlatform";
 	private bool lastIsGrounded;
 	private float groundCheckRadius = 0.05f;
+
 	private bool CheckGrounded() {
 		Bounds b = GetComponent<Collider2D>().bounds;
 		lastIsGrounded = Physics2D.OverlapCircle(new Vector2(b.center.x, b.min.y), groundCheckRadius, LayerMask.GetMask("Ground"));
