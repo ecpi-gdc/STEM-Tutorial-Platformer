@@ -5,11 +5,9 @@ public class PlayerController : MonoBehaviour
 
 	public float moveSpeed;
 	public float jumpSpeed;
-	public float platformMultiplier;
 	public bool canMove;
 
 	private Rigidbody2D body;
-	private bool onPlatform;
 
 	// Start is called before the first frame update
 	void Start()
@@ -26,11 +24,6 @@ public class PlayerController : MonoBehaviour
 		bool isGrounded = CheckGrounded();
 
 		float speed = moveSpeed;
-		if (onPlatform)
-		{
-			speed = speed * platformMultiplier;
-		}
-
 		Vector2 newVelocity = new Vector2();
 		Vector2 newScale = new Vector2(1, 1);
 
@@ -67,7 +60,6 @@ public class PlayerController : MonoBehaviour
 		if (other.gameObject.CompareTag(PLATFORM_TAG))
 		{
 			transform.parent = other.transform;
-			onPlatform = true;
 		}
 	}
 
@@ -76,7 +68,6 @@ public class PlayerController : MonoBehaviour
 		if (other.gameObject.CompareTag(PLATFORM_TAG)) 
 		{
 			transform.parent = null;
-			onPlatform = false;
 		}
 	}
 
