@@ -74,6 +74,13 @@ public class PlayerController : MonoBehaviour
 			levelManager.AddCoins(coin.coinAmount);
 			coin.gameObject.SetActive(false);
 		}
+
+		Heart heart = other.GetComponent<Heart>();
+		if (heart != null)
+		{
+			levelManager.AddHealth(heart.healthAmount);
+			heart.gameObject.SetActive(false);
+		}
 	}
 
 	void OnCollisionEnter2D(Collision2D other)
