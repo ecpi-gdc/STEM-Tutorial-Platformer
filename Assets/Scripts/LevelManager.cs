@@ -36,8 +36,11 @@ public class LevelManager : MonoBehaviour
 
 	public void DamagePlayer(int amount)
 	{
-		SetHealth(healthCount - amount);
-		player.TakeDamage();
+		if (!player.IsInvincible())
+		{
+			SetHealth(healthCount - amount);
+			player.TakeDamage();
+		}
 	}
 
 	public void RespawnPlayer()

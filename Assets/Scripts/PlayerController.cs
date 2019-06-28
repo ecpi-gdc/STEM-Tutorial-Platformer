@@ -7,12 +7,14 @@ public class PlayerController : MonoBehaviour
 	public float moveSpeed;
 	public float jumpSpeed;
 	public float knockbackLength;
+	public float invincibilityLength;
 	public Vector2 knockbackForce;
 	public bool canMove;
 
 	private LevelManager levelManager;
 	private Rigidbody2D body;
 	private float knockbackTime;
+	private float invincibilityTime;
 
 	// Start is called before the first frame update
 	void Start()
@@ -68,6 +70,11 @@ public class PlayerController : MonoBehaviour
 			newVelocity.y = knockbackForce.y;
 
 		}
+
+		if (invincibilityTime > 0)
+		{
+			invincibilityTime = invincibilityTime - Time.deltaTime;
+		}
 		
 		body.velocity = newVelocity;
 		transform.localScale = new Vector2(direction, 1);
@@ -122,6 +129,12 @@ public class PlayerController : MonoBehaviour
 	public void TakeDamage()
 	{
 		knockbackTime = knockbackLength;
+		invincibilityTime = invincibilityLength;
+	}
+
+	public bool IsInvincible()
+	{
+		return invincibilityTime > 0;
 	}
 
 #region Prepared Code
