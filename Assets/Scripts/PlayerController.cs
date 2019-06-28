@@ -6,10 +6,13 @@ public class PlayerController : MonoBehaviour
 	public Transform respawnPoint;
 	public float moveSpeed;
 	public float jumpSpeed;
+	public float knockbackLength;
+	public Vector2 knockbackForce;
 	public bool canMove;
 
 	private LevelManager levelManager;
 	private Rigidbody2D body;
+	private float knockbackTime;
 
 	// Start is called before the first frame update
 	void Start()
@@ -27,36 +30,47 @@ public class PlayerController : MonoBehaviour
 		bool isGrounded = CheckGrounded();
 
 		float speed = moveSpeed;
-		Vector2 newVelocity = new Vector2();
-		Vector2 newScale = new Vector2(1, 1);
+		Vector2 newVelocity = new Vector2(0, body.velocity.y);
+		float direction = transform.localScale.x;
 
-		if (horizontal < 0)
+		if (canMove && knockbackTime <= 0)
 		{
-			newVelocity.x = -speed;
-			newScale.x = -1;
-		}
-		else if (horizontal > 0)
-		{
-			newVelocity.x = speed;
-			newScale.x = 1;
-		}
-		else
-		{
-			newVelocity.x = 0;
-			newScale.x = transform.localScale.x;
-		}
+			if (horizontal < 0)
+			{
+				newVelocity.x = -speed;
+				direction = -1;
+			}
+			else if (horizontal > 0)
+			{
+				newVelocity.x = speed;
+				direction = 1;
+			}
 
-		if (jumping && isGrounded)
-		{
-			newVelocity.y = jumpSpeed;
-		}
-		else
-		{
-			newVelocity.y = body.velocity.y;
+			if (jumping && isGrounded)
+			{
+				newVelocity.y = jumpSpeed;
+			}
 		}
 
+		if (knockbackTime > 0)
+		{
+			knockbackTime = knockbackTime - Time.deltaTime;
+			
+			if (direction > 0)
+			{
+				newVelocity.x = -knockbackForce.x;
+			}
+			else
+			{
+				newVelocity.x = knockbackForce.x;
+			}
+
+			newVelocity.y = knockbackForce.y;
+
+		}
+		
 		body.velocity = newVelocity;
-		transform.localScale = newScale;
+		transform.localScale = new Vector2(direction, 1);
 
 		UpdateAnimator();
 	}
@@ -107,7 +121,7 @@ public class PlayerController : MonoBehaviour
 
 	public void TakeDamage()
 	{
-		// trigger knockback
+		knockbackTime = knockbackLength;
 	}
 
 #region Prepared Code
