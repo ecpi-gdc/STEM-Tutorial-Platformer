@@ -34,6 +34,12 @@ public class LevelManager : MonoBehaviour
 		SetHealth(healthCount + amount);
 	}
 
+	public void DamagePlayer(int amount)
+	{
+		SetHealth(healthCount - amount);
+		player.TakeDamage();
+	}
+
 	public void RespawnPlayer()
 	{
 		StartCoroutine(RespawnPlayerCoroutine());
@@ -65,5 +71,10 @@ public class LevelManager : MonoBehaviour
 	{
 		healthCount = health;
 		healthText.text = healthCount.ToString();
+
+		if (healthCount <= 0)
+		{
+			RespawnPlayer();
+		}
 	}
 }

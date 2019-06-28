@@ -81,6 +81,12 @@ public class PlayerController : MonoBehaviour
 			levelManager.AddHealth(heart.healthAmount);
 			heart.gameObject.SetActive(false);
 		}
+
+		HurtPlayer hurt = other.GetComponent<HurtPlayer>();
+		if (hurt != null)
+		{
+			levelManager.DamagePlayer(hurt.damageAmount);
+		}
 	}
 
 	void OnCollisionEnter2D(Collision2D other)
@@ -97,6 +103,11 @@ public class PlayerController : MonoBehaviour
 		{
 			transform.parent = null;
 		}
+	}
+
+	public void TakeDamage()
+	{
+		// trigger knockback
 	}
 
 #region Prepared Code
