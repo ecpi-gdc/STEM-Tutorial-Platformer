@@ -67,6 +67,13 @@ public class PlayerController : MonoBehaviour
 		{
 			levelManager.RespawnPlayer();
 		}
+
+		Coin coin = other.GetComponent<Coin>();
+		if (coin != null)
+		{
+			levelManager.AddCoins(coin.coinAmount);
+			coin.gameObject.SetActive(false);
+		}
 	}
 
 	void OnCollisionEnter2D(Collision2D other)

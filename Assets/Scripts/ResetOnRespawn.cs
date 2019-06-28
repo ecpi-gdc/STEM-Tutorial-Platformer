@@ -17,5 +17,6 @@ public class ResetOnRespawn : MonoBehaviour
 	{
 		transform.position = startPosition;
 		transform.rotation = startRotation;
+		gameObject.SetActive(true);
 	}
 }
