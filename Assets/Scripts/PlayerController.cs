@@ -37,15 +37,18 @@ public class PlayerController : MonoBehaviour
 			newVelocity.x = speed;
 			newScale.x = 1;
 		}
-		else {
+		else
+		{
 			newVelocity.x = 0;
 			newScale.x = transform.localScale.x;
 		}
 
-		if (jumping && isGrounded) {
+		if (jumping && isGrounded)
+		{
 			newVelocity.y = jumpSpeed;
 		}
-		else {
+		else
+		{
 			newVelocity.y = body.velocity.y;
 		}
 
