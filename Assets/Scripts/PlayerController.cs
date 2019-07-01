@@ -10,6 +10,8 @@ public class PlayerController : MonoBehaviour
 	public float invincibilityLength;
 	public Vector2 knockbackForce;
 	public bool canMove;
+	public AudioSource jumpAudio;
+	public AudioSource hitAudio;
 
 	private LevelManager levelManager;
 	private Rigidbody2D body;
@@ -53,6 +55,7 @@ public class PlayerController : MonoBehaviour
 			if (jumping && isGrounded)
 			{
 				newVelocity.y = jumpSpeed;
+				jumpAudio.Play();
 			}
 		}
 
@@ -147,6 +150,7 @@ public class PlayerController : MonoBehaviour
 	{
 		knockbackTime = knockbackLength;
 		invincibilityTime = invincibilityLength;
+		hitAudio.Play();
 	}
 
 	public bool IsInvincible()

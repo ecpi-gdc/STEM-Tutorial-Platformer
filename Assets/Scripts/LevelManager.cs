@@ -9,6 +9,9 @@ public class LevelManager : MonoBehaviour
 	public float respawnDelay;
 	public Text coinText;
 	public Text healthText;
+	public AudioSource coinAudio;
+	public AudioSource heartAudio;
+	public AudioSource deathAudio;
 
 	private PlayerController player;
 	private ResetOnRespawn[] respawnObjects;
@@ -27,11 +30,13 @@ public class LevelManager : MonoBehaviour
 	public void AddCoins(int amount)
 	{
 		SetCoins(coinCount + amount);
+		coinAudio.Play();
 	}
 
 	public void AddHealth(int amount)
 	{
 		SetHealth(healthCount + amount);
+		heartAudio.Play();
 	}
 
 	public void DamagePlayer(int amount)
@@ -50,6 +55,7 @@ public class LevelManager : MonoBehaviour
 
 	private IEnumerator RespawnPlayerCoroutine()
 	{
+		deathAudio.Play();
 		player.gameObject.SetActive(false);
 		yield return new WaitForSeconds(respawnDelay);
 		player.transform.position = player.respawnPoint.position;
