@@ -40,6 +40,7 @@ public class PauseMenu : MonoBehaviour
 		isPaused = paused;
 	}
 
+#region Prepared Code
 	public void Resume()
 	{
 		SetPaused(false);
@@ -49,5 +50,6 @@ public class PauseMenu : MonoBehaviour
 	{
 		SetPaused(true);
 	}
+#endregion
 
 }

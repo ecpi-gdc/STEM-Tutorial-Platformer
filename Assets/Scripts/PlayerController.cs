@@ -111,7 +111,7 @@ public class PlayerController : MonoBehaviour
 		}
 
 		HurtPlayer hurt = other.GetComponent<HurtPlayer>();
-		if (hurt != null)
+		if (hurt != null && hurt.IsActive)
 		{
 			levelManager.DamagePlayer(hurt.damageAmount);
 		}
