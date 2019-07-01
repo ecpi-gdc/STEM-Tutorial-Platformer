@@ -595,11 +595,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pause Menu
       objectReference: {fileID: 0}
-    - target: {fileID: 2160266671859083051, guid: fa94a4cb728feb9469ecf95729a03356,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2160266671859083055, guid: fa94a4cb728feb9469ecf95729a03356,
         type: 3}
       propertyPath: m_LocalPosition.x
