@@ -119,6 +119,12 @@ public class PlayerController : MonoBehaviour
 			check.Trigger();
 			respawnPoint = check.transform;
 		}
+
+		LevelEnd end = other.GetComponent<LevelEnd>();
+		if (end != null)
+		{
+			end.Trigger();
+		}
 	}
 
 	void OnCollisionEnter2D(Collision2D other)
@@ -170,9 +176,14 @@ public class PlayerController : MonoBehaviour
 
 	private void UpdateAnimator()
 	{
+		UpdateAnimator(Mathf.Abs(body.velocity.x), lastIsGrounded);
+	}
+
+	public void UpdateAnimator(float speed, bool grounded)
+	{
 		Animator anim = GetComponent<Animator>();
-		anim.SetFloat("speed", Mathf.Abs(body.velocity.x));
-		anim.SetBool("grounded", lastIsGrounded);
+		anim.SetFloat("speed", speed);
+		anim.SetBool("grounded", grounded);
 	}
 #endregion
 }

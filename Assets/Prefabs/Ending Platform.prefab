@@ -1,5 +1,21 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &4921907352263617269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 48260226972334735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3a30c185728df42b50b9741f5ffe8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  endPoint: {fileID: 5834839659284154277}
+  endAnim: {fileID: 7124383455831049346}
+  flagAnim: {fileID: 3002213868537451800}
+  walkDelay: 2
 --- !u!1 &611359276382178561
 GameObject:
   m_ObjectHideFlags: 0
@@ -1361,7 +1377,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7412401188810066995}
   - component: {fileID: 4408824598370542529}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ending Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4001,7 +4017,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5834839659284154278}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.883, y: 0.325, z: 0}
+  m_LocalPosition: {x: 1.94, y: 0.325, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7412401188810066995}
@@ -5261,6 +5277,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4607dda6380d83041878b84c1ed38fad, type: 3}
+--- !u!95 &3002213868537451800 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8742474626199142996, guid: 4607dda6380d83041878b84c1ed38fad,
+    type: 3}
+  m_PrefabInstance: {fileID: 5834839658220640076}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &48260226972334735 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5787960782938271171, guid: 4607dda6380d83041878b84c1ed38fad,
+    type: 3}
+  m_PrefabInstance: {fileID: 5834839658220640076}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &48260226972334734 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5787960782938271170, guid: 4607dda6380d83041878b84c1ed38fad,
@@ -5336,6 +5364,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f9088b468745de0499031f20a9eb5879, type: 3}
+--- !u!95 &7124383455831049346 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 3613970204728043046, guid: f9088b468745de0499031f20a9eb5879,
+    type: 3}
+  m_PrefabInstance: {fileID: 5834839658291520164}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1034635335268412559 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6819083817294122539, guid: f9088b468745de0499031f20a9eb5879,
