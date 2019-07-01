@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
 	public bool canMove;
 	public AudioSource jumpAudio;
 	public AudioSource hitAudio;
+	public AudioSource checkpointAudio;
 
 	private LevelManager levelManager;
 	private Rigidbody2D body;
@@ -121,6 +122,7 @@ public class PlayerController : MonoBehaviour
 		{
 			check.Trigger();
 			respawnPoint = check.transform;
+			checkpointAudio.Play();
 		}
 
 		LevelEnd end = other.GetComponent<LevelEnd>();
