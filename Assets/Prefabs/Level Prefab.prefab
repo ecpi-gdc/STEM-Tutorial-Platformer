@@ -64,7 +64,7 @@ Transform:
   m_GameObject: {fileID: 192883142659835175}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.0546, y: 0.922, z: 1}
-  m_LocalScale: {x: 2.8543513, y: 4.7392926, z: 1}
+  m_LocalScale: {x: 2, y: 4, z: 1}
   m_Children: []
   m_Father: {fileID: 1454505843584678675}
   m_RootOrder: 2
@@ -234,7 +234,7 @@ Transform:
   m_GameObject: {fileID: 3158710173729521513}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.0546, y: 0.922, z: 1}
-  m_LocalScale: {x: 2.8543513, y: 4.7392926, z: 1}
+  m_LocalScale: {x: 2, y: 4, z: 1}
   m_Children: []
   m_Father: {fileID: 1454505843584678675}
   m_RootOrder: 1
@@ -346,7 +346,7 @@ Transform:
   m_GameObject: {fileID: 6996368875567146534}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.0546, y: 0.922, z: 1}
-  m_LocalScale: {x: 2.8543513, y: 4.7392926, z: 1}
+  m_LocalScale: {x: 2, y: 4, z: 1}
   m_Children: []
   m_Father: {fileID: 1454505843584678675}
   m_RootOrder: 0
@@ -411,6 +411,7 @@ GameObject:
   - component: {fileID: 2428066217321510940}
   - component: {fileID: 369598355584194932}
   - component: {fileID: 8671177122270885618}
+  - component: {fileID: 1901437295}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -426,7 +427,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7707462515699751749}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.28, y: -0.49, z: -10}
+  m_LocalPosition: {x: -2.23, y: -0.49, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1454505843584678675}
@@ -460,7 +461,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 1
+  orthographic size: 3.84
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -470,7 +471,7 @@ Camera:
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 1
-  m_AllowMSAA: 1
+  m_AllowMSAA: 0
   m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
@@ -496,11 +497,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a160d838ff8b4b4693ac20007e008c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_AssetsPPU: 100
+  m_AssetsPPU: 32
   m_RefResolutionX: 320
-  m_RefResolutionY: 180
+  m_RefResolutionY: 160
   m_UpscaleRT: 0
-  m_PixelSnapping: 1
+  m_PixelSnapping: 0
   m_CropFrameX: 0
   m_CropFrameY: 0
   m_StretchFill: 0
