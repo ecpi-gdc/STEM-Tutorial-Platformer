@@ -2,15 +2,16 @@ using UnityEngine;
 
 public class StompEnemy : MonoBehaviour
 {
-	// Start is called before the first frame update
-	void Start()
+
+	void OnTriggerEnter2D(Collider2D other)
 	{
-		
+		if (other.CompareTag(ENEMY_TAG))
+		{
+			other.gameObject.SetActive(false);
+		}
 	}
 
-	// Update is called once per frame
-	void Update()
-	{
-		
-	}
+	#region Prepared Code
+	private const string ENEMY_TAG = "Enemy";
+	#endregion
 }
