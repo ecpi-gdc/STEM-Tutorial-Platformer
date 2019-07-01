@@ -55,7 +55,7 @@ public class LevelManager : MonoBehaviour
 		player.transform.position = player.respawnPoint.position;
 		player.gameObject.SetActive(true);
 
-		foreach (var reset in respawnObjects)
+		foreach (ResetOnRespawn reset in respawnObjects)
 		{
 			reset.ResetObject();
 		}

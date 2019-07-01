@@ -143,19 +143,22 @@ public class PlayerController : MonoBehaviour
 	private bool lastIsGrounded;
 	private float groundCheckRadius = 0.05f;
 
-	private bool CheckGrounded() {
+	private bool CheckGrounded()
+	{
 		Bounds b = GetComponent<Collider2D>().bounds;
 		lastIsGrounded = Physics2D.OverlapCircle(new Vector2(b.center.x, b.min.y), groundCheckRadius, LayerMask.GetMask("Ground"));
 		return lastIsGrounded;
 	}
 
-	void OnDrawGizmosSelected() {
+	void OnDrawGizmosSelected()
+	{
 		Bounds b = GetComponent<Collider2D>().bounds;
 		Gizmos.color = Color.cyan;
 		Gizmos.DrawWireSphere(new Vector3(b.center.x, b.min.y, 0f), groundCheckRadius);
 	}
 
-	private void UpdateAnimator() {
+	private void UpdateAnimator()
+	{
 		Animator anim = GetComponent<Animator>();
 		anim.SetFloat("speed", Mathf.Abs(body.velocity.x));
 		anim.SetBool("grounded", lastIsGrounded);
