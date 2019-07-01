@@ -133,7 +133,7 @@ MonoBehaviour:
   moveTarget: {fileID: 1396713767}
   startPoint: {fileID: 502471607}
   endPoint: {fileID: 234607389}
-  moveSpeed: 0.5
+  moveSpeed: 0
 --- !u!82 &3886772 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 6191292058132319857, guid: c9b2e33d1fb28154b8bf5c7c1cf6333d,
@@ -597,6 +597,25 @@ AudioSource:
     type: 3}
   m_PrefabInstance: {fileID: 1237938640}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &632063689 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 744088353700859663, guid: dee6ed455e937584db7b26948e50ecc6,
+    type: 3}
+  m_PrefabInstance: {fileID: 319458873}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &632063691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 632063689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d72444c1108c54419e54064f2327f17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 1
 --- !u!1 &787248337
 GameObject:
   m_ObjectHideFlags: 0
@@ -1294,6 +1313,21 @@ PrefabInstance:
         type: 3}
       propertyPath: orthographic size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 192883142659835175, guid: c9b2e33d1fb28154b8bf5c7c1cf6333d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6996368875567146534, guid: c9b2e33d1fb28154b8bf5c7c1cf6333d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3158710173729521513, guid: c9b2e33d1fb28154b8bf5c7c1cf6333d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c9b2e33d1fb28154b8bf5c7c1cf6333d, type: 3}

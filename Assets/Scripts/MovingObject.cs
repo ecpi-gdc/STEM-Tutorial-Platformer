@@ -30,4 +30,18 @@ public class MovingObject : MonoBehaviour
 			currentTarget = startPoint.position;
 		}
 	}
+
+#region Prepared Code
+	void Reset()
+	{
+		Collider2D c = GetComponentInChildren<Collider2D>();
+		if (c != null)
+		{
+			moveTarget = c.transform;
+		}
+
+		startPoint = transform.Find("Start");
+		endPoint = transform.Find("End");
+	}
+#endregion
 }
