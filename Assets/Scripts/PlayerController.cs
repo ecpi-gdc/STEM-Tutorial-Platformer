@@ -112,6 +112,13 @@ public class PlayerController : MonoBehaviour
 		{
 			levelManager.DamagePlayer(hurt.damageAmount);
 		}
+
+		Checkpoint check = other.GetComponent<Checkpoint>();
+		if (check != null)
+		{
+			check.Trigger();
+			respawnPoint = check.transform;
+		}
 	}
 
 	void OnCollisionEnter2D(Collision2D other)
