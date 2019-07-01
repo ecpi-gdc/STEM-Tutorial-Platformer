@@ -458,6 +458,7 @@ MonoBehaviour:
   canMove: 1
   jumpAudio: {fileID: 533074931}
   hitAudio: {fileID: 3886772}
+  checkpointAudio: {fileID: 1237938641}
 --- !u!1 &306559626 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1641958064860167294, guid: 747bff739e717bd40b5746da06b959e9,
@@ -1842,6 +1843,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c9b2e33d1fb28154b8bf5c7c1cf6333d, type: 3}
+--- !u!82 &1237938641 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2393253237346134803, guid: c9b2e33d1fb28154b8bf5c7c1cf6333d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1237938640}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1299839288 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1375569307636677803, guid: 96132cc230eaff74aad2b5c6b476ba05,
