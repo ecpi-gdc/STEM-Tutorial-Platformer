@@ -1475,6 +1475,75 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1338040576}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1504702120
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6539035834561086331, guid: 660d3c2798b9bd94f90d7a41d95ae20e,
+        type: 3}
+      propertyPath: m_Name
+      value: Spin Saw
+      objectReference: {fileID: 0}
+    - target: {fileID: 8819559565416957699, guid: 660d3c2798b9bd94f90d7a41d95ae20e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 19.5227
+      objectReference: {fileID: 0}
+    - target: {fileID: 8819559565416957699, guid: 660d3c2798b9bd94f90d7a41d95ae20e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.9336
+      objectReference: {fileID: 0}
+    - target: {fileID: 8819559565416957699, guid: 660d3c2798b9bd94f90d7a41d95ae20e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.10839844
+      objectReference: {fileID: 0}
+    - target: {fileID: 8819559565416957699, guid: 660d3c2798b9bd94f90d7a41d95ae20e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8819559565416957699, guid: 660d3c2798b9bd94f90d7a41d95ae20e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8819559565416957699, guid: 660d3c2798b9bd94f90d7a41d95ae20e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8819559565416957699, guid: 660d3c2798b9bd94f90d7a41d95ae20e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8819559565416957699, guid: 660d3c2798b9bd94f90d7a41d95ae20e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8819559565416957699, guid: 660d3c2798b9bd94f90d7a41d95ae20e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8819559565416957699, guid: 660d3c2798b9bd94f90d7a41d95ae20e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8819559565416957699, guid: 660d3c2798b9bd94f90d7a41d95ae20e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 660d3c2798b9bd94f90d7a41d95ae20e, type: 3}
 --- !u!82 &1547257884 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 1142526642118149825, guid: c9b2e33d1fb28154b8bf5c7c1cf6333d,
