@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7335442651304892302}
   - component: {fileID: 7365377772880107565}
+  - component: {fileID: 3116988206548502897}
   m_Layer: 0
   m_Name: Wiggler
   m_TagString: Untagged
@@ -53,6 +54,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &3116988206548502897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6873297327338837522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 322899ab9a3f97249836871e81cdb3b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveTarget: {fileID: 1963175730751880045}
+  startPoint: {fileID: 828920563456201020}
+  endPoint: {fileID: 4895059450247830738}
+  moveSpeed: 1
 --- !u!1 &7421335266246556546
 GameObject:
   m_ObjectHideFlags: 0
@@ -95,6 +112,7 @@ GameObject:
   - component: {fileID: 8096277788964895607}
   - component: {fileID: 6681072353067595593}
   - component: {fileID: 4142630976878869556}
+  - component: {fileID: 7517827630344827523}
   m_Layer: 0
   m_Name: spritesheet_225
   m_TagString: Enemy
@@ -216,6 +234,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.49805993, y: 0.18764019}
   m_EdgeRadius: 0
+--- !u!114 &7517827630344827523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7632690260552598158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d72444c1108c54419e54064f2327f17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 1
 --- !u!1 &8870332580530093617
 GameObject:
   m_ObjectHideFlags: 0

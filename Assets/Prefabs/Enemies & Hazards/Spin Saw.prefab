@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 516540309997956910}
   - component: {fileID: 260032809952455057}
   - component: {fileID: 44614048170480845}
+  - component: {fileID: 7916929873813799854}
   m_Layer: 0
   m_Name: Spin Saw
   m_TagString: Untagged
@@ -116,6 +117,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7916929873813799854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1362967169356373418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d72444c1108c54419e54064f2327f17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 1
 --- !u!1 &4285712782645209661
 GameObject:
   m_ObjectHideFlags: 0
@@ -185,6 +199,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8819559565416957699}
+  - component: {fileID: 3211292854572926394}
   m_Layer: 0
   m_Name: Spin Saw
   m_TagString: Untagged
@@ -209,3 +224,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3211292854572926394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6539035834561086331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 322899ab9a3f97249836871e81cdb3b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveTarget: {fileID: 6163302745502204991}
+  startPoint: {fileID: 2086063201544257934}
+  endPoint: {fileID: 9189856796682711874}
+  moveSpeed: 1
