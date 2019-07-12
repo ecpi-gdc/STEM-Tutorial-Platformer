@@ -89,6 +89,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7016150091074162972}
   - component: {fileID: 4329080121048514625}
+  - component: {fileID: 6430414823445564850}
   m_Layer: 0
   m_Name: Heart
   m_TagString: Untagged
@@ -127,3 +128,16 @@ CircleCollider2D:
   m_Offset: {x: 0.0008363724, y: 0.011085182}
   serializedVersion: 2
   m_Radius: 0.29436398
+--- !u!114 &6430414823445564850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5681776675814502225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eb5da8892f403143973261797cad5dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthAmount: 1
