@@ -117,18 +117,18 @@ public class PlayerController : MonoBehaviour
 			levelManager.DamagePlayer(hurt.damageAmount);
 		}
 
+		LevelEnd end = other.GetComponent<LevelEnd>();
+		if (end != null)
+		{
+			end.Trigger();
+		}
+
 		Checkpoint check = other.GetComponent<Checkpoint>();
 		if (check != null)
 		{
 			check.Trigger();
 			respawnPoint = check.transform;
 			checkpointAudio.Play();
-		}
-
-		LevelEnd end = other.GetComponent<LevelEnd>();
-		if (end != null)
-		{
-			end.Trigger();
 		}
 	}
 
