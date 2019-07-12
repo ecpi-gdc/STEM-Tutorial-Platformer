@@ -39,6 +39,23 @@ public class LevelManager : MonoBehaviour
 		heartAudio.Play();
 	}
 
+	private void SetCoins(int coins)
+	{
+		coinCount = coins;
+		coinText.text = coinCount.ToString();
+	}
+
+	private void SetHealth(int health)
+	{
+		healthCount = health;
+		healthText.text = healthCount.ToString();
+
+		if (healthCount <= 0)
+		{
+			RespawnPlayer();
+		}
+	}
+
 	public void DamagePlayer(int amount)
 	{
 		if (!player.IsInvincible())
@@ -68,22 +85,5 @@ public class LevelManager : MonoBehaviour
 
 		SetCoins(0);
 		SetHealth(startingHealth);
-	}
-
-	private void SetCoins(int coins)
-	{
-		coinCount = coins;
-		coinText.text = coinCount.ToString();
-	}
-
-	private void SetHealth(int health)
-	{
-		healthCount = health;
-		healthText.text = healthCount.ToString();
-
-		if (healthCount <= 0)
-		{
-			RespawnPlayer();
-		}
 	}
 }
