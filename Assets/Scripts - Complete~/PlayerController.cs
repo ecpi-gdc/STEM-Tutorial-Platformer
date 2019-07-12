@@ -132,22 +132,6 @@ public class PlayerController : MonoBehaviour
 		}
 	}
 
-	void OnCollisionEnter2D(Collision2D other)
-	{
-		if (other.gameObject.CompareTag(PLATFORM_TAG))
-		{
-			transform.parent = other.transform;
-		}
-	}
-
-	void OnCollisionExit2D(Collision2D other) 
-	{
-		if (other.gameObject.CompareTag(PLATFORM_TAG)) 
-		{
-			transform.parent = null;
-		}
-	}
-
 	public void TakeDamage()
 	{
 		knockbackTime = knockbackLength;
@@ -165,6 +149,22 @@ public class PlayerController : MonoBehaviour
 	private const string DEATHBOX_TAG = "DeathBox";
 	private bool lastIsGrounded;
 	private float groundCheckRadius = 0.05f;
+
+	void OnCollisionEnter2D(Collision2D other)
+	{
+		if (other.gameObject.CompareTag(PLATFORM_TAG))
+		{
+			transform.parent = other.transform;
+		}
+	}
+
+	void OnCollisionExit2D(Collision2D other) 
+	{
+		if (other.gameObject.CompareTag(PLATFORM_TAG)) 
+		{
+			transform.parent = null;
+		}
+	}
 
 	private bool CheckGrounded()
 	{
