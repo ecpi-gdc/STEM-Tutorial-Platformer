@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7335442651304892302}
   - component: {fileID: 7365377772880107565}
+  - component: {fileID: 1636089938952314185}
   - component: {fileID: 3116988206548502897}
   m_Layer: 0
   m_Name: Wiggler
@@ -54,6 +55,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1636089938952314185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6873297327338837522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1de751257fcb0ef41afa5d21bf1494c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &3116988206548502897
 MonoBehaviour:
   m_ObjectHideFlags: 0
