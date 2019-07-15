@@ -106,10 +106,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   respawnPoint: {fileID: 0}
   moveSpeed: 5
-  jumpSpeed: 5
+  jumpSpeed: 7
   knockbackLength: 0.125
-  invincibilityLength: 1
-  knockbackForce: {x: 2, y: 2}
+  invincibilityLength: 0.5
+  knockbackForce: {x: 6, y: 4}
   canMove: 0
   jumpAudio: {fileID: 0}
   hitAudio: {fileID: 0}
@@ -203,6 +203,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8364336598965407858}
   - component: {fileID: 4041975747782022993}
+  - component: {fileID: 2044073757}
   m_Layer: 9
   m_Name: Enemy Stomper
   m_TagString: Untagged
@@ -237,7 +238,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.000000029802322, y: -0.009888023}
+  m_Offset: {x: 0.0009300932, y: -0.013951242}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -248,5 +249,17 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.2799278, y: 0.051036775}
+  m_Size: {x: 0.40091592, y: 0.06474364}
   m_EdgeRadius: 0
+--- !u!114 &2044073757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5709601311742612406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57467d6bc403f5a47bcf6593e83d6f1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
